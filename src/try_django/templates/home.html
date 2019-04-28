@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block head_title %}
+Welcome
+{% endblock %}
+
+{% block content %}
+    {{ title }}
+    {{ user }}
+    {{ user.is_authenticated }}
+
+    {% if user.is_authenticated %}
+        <P>Some specific data for authenticated user.</P>
+        {% for item in my_list %}
+            - {{ item }}
+        {% endfor %}
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,22 @@
+# Creating a new project
+django-admin startproject <name_of_project>
+python manage.py migrate
+
+# creating the server for the session
+python manage.py runserver
+
+# Creating a superuser account
+python manage.py createsuperuser # can be run at anytime
+
+# discovering general commands for manage.py
+python manage.py
+
+
+# creating a new app (think of it like a component)
+ - 0 - python manage.py startapp <name_of_app>
+# After adding a new app
+ - 1 - add the app name to the settings of the project
+# do this after any new app changes are made the following must be made
+ - 2 - python manage.py makemigrations
+ - 3 - python manage.py migrate
+
