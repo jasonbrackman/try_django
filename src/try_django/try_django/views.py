@@ -24,7 +24,7 @@ def contact_view(request):
     form = ContactForm(request.POST or None)
     if form.is_valid():
         print(form.cleaned_data)
-        form.Contactform()  # will clear out the form
+        form = ContactForm()  # will clear out the form
 
     context = {
         "title": "Contact us ...",
