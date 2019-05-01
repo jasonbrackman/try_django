@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 
 {% block head_title %}
-Blog: {{ object.title }}
+Delete Blog: {{ object.title }}
 {% endblock %}
 
 {% block content %}
-    <h1>{{ object.title }} - DELETE</h1>
+    <h1>DELETE: {{ object.title }}</h1>
     <P>Are you sure you want to DELETE the following?</P>
     <P>{{ object.content }}</P>
     <form method="POST"> {% csrf_token %}
-        <button class="btn btn-delete">DELETE</button>
+        <button type="text">DELETE</button>
     </form>
 {% endblock %}
