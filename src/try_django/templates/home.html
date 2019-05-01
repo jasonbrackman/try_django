@@ -5,14 +5,11 @@ Welcome
 {% endblock %}
 
 {% block content %}
-    {{ title }}
-    {{ user }}
-    {{ user.is_authenticated }}
+    <h1>{{ title }}</h1>
 
     {% if user.is_authenticated %}
-        <P>Some specific data for authenticated user.</P>
-        {% for item in my_list %}
-            - {{ item }}
+        {% for item in blog_list %}
+            {% include 'blog/list_inline.html' with blog_post=item %}
         {% endfor %}
     {% endif %}
 {% endblock %}

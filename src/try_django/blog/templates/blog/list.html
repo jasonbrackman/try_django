@@ -6,7 +6,9 @@ Blog: {{ object.title }}
 
 
 {% block content %}
-    {% for object in object_list %}
-        <li><A HREF="{{ object.get_absolute_url }}">{{ object.title }}</A></li>
-    {% endfor %}
+    <div class="row">
+        {% for object in object_list %}
+            {% include 'blog/list_inline.html' with blog_post=object %}
+        {% endfor %}
+    </div>
 {% endblock %}

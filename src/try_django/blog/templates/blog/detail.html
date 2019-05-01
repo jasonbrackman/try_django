@@ -6,11 +6,13 @@ Blog: {{ object.title }}
 
 {% block content %}
     <h1>{{ object.title }}</h1>
-    <P>{{ object.content }}</P>
     {% if request.user.is_authenticated %}
         {% if request.user.is_staff %}
             <A HREF="{{ object.get_edit_url }}">Edit</A>
             <A HREF="{{ object.get_delete_url }}">DELETE</A>
         {% endif %}
     {% endif %}
+
+    <P>{{ object.content }}</P>
+
 {% endblock %}
