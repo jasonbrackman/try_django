@@ -1,3 +1,9 @@
+Note: CRUD
+C - create
+R - read
+U - update
+D - delete
+
 # Creating a new project
 django-admin startproject <name_of_project>
 python manage.py migrate
