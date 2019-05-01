@@ -11,6 +11,9 @@ python manage.py createsuperuser # can be run at anytime
 # discovering general commands for manage.py
 python manage.py
 
+# drop to shell and give commandline instructions
+python manage.py shell
+
 
 # creating a new app (think of it like a component)
  - 0 - python manage.py startapp <name_of_app>
