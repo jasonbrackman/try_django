@@ -6,5 +6,9 @@ Blog: {{ object.title }}
 
 {% block content %}
     <h1>{{ object.title }} - DELETE</h1>
+    <P>Are you sure you want to DELETE the following?</P>
     <P>{{ object.content }}</P>
+    <form method="POST"> {% csrf_token %}
+        <button class="btn btn-delete">DELETE</button>
+    </form>
 {% endblock %}
