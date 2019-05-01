@@ -1,9 +1,16 @@
-Note: CRUD
+Notes:
+
+# ------------------------------------
+CRUD
 C - create
 R - read
 U - update
 D - delete
 
+https://getbootstrap.com/
+https://www.lipsum.com/
+
+# ------------------------------------
 # Creating a new project
 django-admin startproject <name_of_project>
 python manage.py migrate

@@ -9,7 +9,7 @@ Welcome
 
     {% if user.is_authenticated %}
         {% for item in blog_list %}
-            {% include 'blog/list_inline.html' with blog_post=item %}
+            {% include 'blog/list_inline.html' with blog_post=item truncate=True details=True %}
         {% endfor %}
     {% endif %}
 {% endblock %}

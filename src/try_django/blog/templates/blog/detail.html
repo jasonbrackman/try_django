@@ -5,14 +5,15 @@ Blog: {{ object.title }}
 {% endblock %}
 
 {% block content %}
-    <h1>{{ object.title }}</h1>
-    {% if request.user.is_authenticated %}
-        {% if request.user.is_staff %}
-            <A HREF="{{ object.get_edit_url }}">Edit</A>
-            <A HREF="{{ object.get_delete_url }}">DELETE</A>
+    <div class="row">
+        {% include 'blog/list_inline.html' with blog_post=object truncate=False details=False%}
+        {% if request.user.is_authenticated %}
+            {% if request.user.is_staff %}
+                <div class="col-12">
+                    <A HREF="{{ object.get_edit_url }}">Edit</A>
+                    <A HREF="{{ object.get_delete_url }}">DELETE</A>
+                </div>
+            {% endif %}
         {% endif %}
-    {% endif %}
-
-    <P>{{ object.content }}</P>
-
+    </div>
 {% endblock %}
